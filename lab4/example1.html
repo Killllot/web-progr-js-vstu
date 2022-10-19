@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;
+charset=windows-1251">
+
+<script language="javascript" type="text/javascript"> 
+
+</script>
+</head>
+ <body>
+
+<ul id="countryList">
+	<li>Россия</li>
+	<li>Великобритания</li>
+	<li>Франция</li>
+	<li>Германия</li>
+	<li>США</li>
+	<li>Бразилия</li>
+</ul>
+<p> Население </p>
+<ol id="population">
+	<li>143.5 млн. чел.</li>
+	<li>63.4 млн. чел.</li>
+	<li>65.9 млн. чел.</li>
+	<li>81.1 млн. чел.</li>
+	<li>316.7 млн. чел.</li>
+	<li>201 млн. чел.</li>
+</ol>
+
+</body>
+<script type="text/javascript">
+	let country = document.getElementById("countryList").getElementsByTagName("li");
+	let countCountry = country.length;
+	document.write('Количество элементов в индексом "countryList": ' + countCountry)
+</script>
+</html>

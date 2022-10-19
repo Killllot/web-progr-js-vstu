@@ -1,0 +1,143 @@
+<html>
+<head>
+<script type= "text/javascript" src="jquery-3.1.1.js"></script>
+<style>
+.text1 {
+	font-size: 14pt;
+	font-family: "Times New Roman";	
+	color: red;
+}
+
+.text2 {
+	font-size: 12pt;
+	font-family: Arial;
+	color: green;	
+}
+
+.text3 {
+	font-size: 12pt;
+	font-family: Verdana;	
+	color: blue;	
+}
+text4 {
+	font-size: 12pt;
+	font-family: Verdana;	
+	color: blue;	
+}
+
+</style>
+<script>
+	$(document).ready(function()   { 
+//здесь находится код JavaScript
+		$('#b1').click(function()  {
+			$('body').addClass('text1');
+			$('body').removeClass('text2');
+			$('body').removeClass('text3');
+			});
+			$('#b2').click(function()  {
+			$('body').addClass('text2');
+			$('body').removeClass('text1');
+			$('body').removeClass('text3');
+			});
+			$('#b3').click(function()  {
+			$('body').addClass('text3');
+			$('body').removeClass('text1');
+			$('body').removeClass('text2');
+			});
+			$('#b4').click(function()  {
+			$('body').removeClass('text1');
+			$('body').removeClass('text2');
+			$('body').removeClass('text3');
+			});
+			
+			$('#backcolor').change(function()   { 
+			var color = $(this).val();
+			$('body').css('background-color', color);			
+			});
+			$('#list_1').mouseover(function()  {
+				$('#list_1').css('text-decoration','underline');
+}) ;
+			$('#list_1').mouseout(function()  {
+				$('#list_1').css('text-decoration','none');
+}) ;
+			$('#list_2').mouseover(function()  {
+				$('#list_2').css('font-style','italic');
+				
+});
+			$('#list_2').mouseout(function()  {
+				$('#list_2').css('font-style','normal');
+				});
+			$('#Roll').hover(function()  {
+				$('#Roll').attr('src','Pics/pic2.jpg' );
+				} ,
+				function()  {
+				$('#Roll').attr('src','Pics/pic1.jpg' );
+});
+            
+			
+});
+
+	
+</script>
+
+</head>
+
+<body>
+
+	<fieldset>
+		<legend>
+			Выбор стиля текста
+		</legend>
+		<button id="b1">Стиль 1</button>
+		<button id="b2">Стиль 2</button>
+		<button id="b3">Стиль 3</button>
+		<button id="b4">Сброс</button>
+	</fieldset>
+	<fieldset>
+		<legend>
+			Выбор цвета фона
+		</legend>
+		<select id="backcolor" name="color">
+			<option value="white">white</option>
+			<option value="aqua">aqua</option>
+			<option value="beige">beige</option>
+			<option value="cyan">cyan</option>
+			<option value="deepskyblue">deepskyblue</option>
+			<option value="chocolate">chocolate</option>
+		</select>
+	</fieldset>
+<p>
+	
+</p>
+<p>
+Теги тела документа предназначены для управления отображением информации в браузере пользователя. Тело документа состоит из:
+</p>
+<ul id="list_1">
+	<li>иерархических контейнеров и заставок;</li>
+	<li>заголовков различного уровня;</li>
+	<li>блоков (параграфы, списки, формы, таблицы, изображения и т.д.);</li>
+	<li>горизонтальных линий и адресов;</li>
+	<li>текста, разбитого на области действия стилей (подчеркивание, выделение, курсив);</li>
+	<li>графики, гипертекстовых ссылок и т.д.</li>
+</ul>
+<p>Тело документа – контейнер &lt;body&gt;. Описание тегов тела документа следует начать с тега <body>, который имеет ряд атрибутов.</p>
+<p>Атрибут background определяет фон, на котором отображается текст документа. Так, если источником для фона HTML-документа является графический файл image.jpg, то начальный тег будет выглядеть так:</p>
+	&lt;body background="image.jpg"&gt;
+<p>В качестве значения данного атрибута используется адрес в сокращенной форме URL. В данном случае это адрес локального файла. 
+В отличие от обычных изображений, для фона не устанавливаются ширина и высота, и он всегда отображается в натуральную величину с масштабом 100%. Если рисунок по размеру меньше окна браузера, то картинка повторяется по горизонтали вправо и вниз, выстраиваясь, как мозаика.</p>
+<p>Существуют также следующие основные атрибуты тега &lt;body&gt;:</p>
+<ul id="list_2">
+	<li>bgcolor – определяет цвет фона документа;</li>
+	<li>text – определяет цвет текста;</li>
+	<li>link – определяет цвет непосещенных ссылок;</li>
+	<li>vlink – определяет цвет посещенных ссылок;</li>
+	<li>alink – определяет цвет активных ссылок.</li>
+</ul>	
+<p>В качестве значения данных атрибутов может использоваться английское обозначение цвета (red, white, darkblue) или константа вида #XXXXXX, определяющая цвет в терминах RGB (Red, Green , Blue) в шестнадцатеричной нотации.</p>
+
+<h3>Пример использования JavaScript для создания так называемого Rollover Image</h3>
+<div align="center">
+	<img id="Roll" src="Pics/pic1.jpg">
+</div>
+</body>
+</html>
