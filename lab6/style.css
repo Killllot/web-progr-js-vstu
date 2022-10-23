@@ -1,0 +1,17 @@
+.text1 {
+    font-size: 14pt;
+    font-family: "Times New Roman";
+    color: red;
+}
+
+.text2 {
+    font-size: 12pt;
+    font-family: Arial;
+    color: green;
+}
+
+.text3 {
+    font-size: 12pt;
+    font-family: Verdana;
+    color: blue;
+}
