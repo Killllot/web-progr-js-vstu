@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <title>Title</title>
+    <script src="js/jquery-3.6.1.js"></script>
+    <script src="js/Task1.js"></script>
+</head>
+<body>
+<form id="calculation">
+  <select name="sel_value" id="sel_val">
+    <option value="default">Выберите величину</option>
+    <option value="time">Время</option>
+    <option value="speed">Скорость</option>
+    <option value="distance">Расстояние</option>
+  </select>
+
+  <fieldset id="start_data">
+    <legend>Данные для расчета</legend>
+    <div id="time" ><label>Время, ч</label><input type="text" name="val_time" id="val_time"></div>
+    <div id="speed"><label>Скорость, км/ч</label><input type="text" name="val_speed" id="val_speed"></div>
+    <div id="distance"><label>Расстояние, км</label><input type="text" name="val_distance" id="val_distance"></div>
+  </fieldset>
+
+  <button id="count_button">Рассчитать</button>
+
+  <fieldset id="results">
+    <legend>Результат</legend>
+    <label>Результат</label><input type="text" name="result" id="result">
+  </fieldset>
+
+  <button id="reset" value="reset">Сброс</button>
+</form>
+</body>
+</html>

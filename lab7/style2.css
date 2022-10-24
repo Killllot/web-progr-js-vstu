@@ -1,0 +1,26 @@
+ieldset {
+    background-color: #F5F5DC;
+}
+input {
+    margin: 5px;
+}
+label {
+    font-size: 14pt;
+    font-family: "Times New Roman";
+}
+.mark {
+    font-size: 13pt;
+    font-family: "Times New Roman";
+    color: #0000FF;
+}
+legend {
+    font-size: 16pt;
+    font-family: "Times New Roman";
+    color: #0000FF;
+}
+
+#warning {
+    font-size: 15pt;
+    font-family: "Times New Roman";
+    color: #FF0000;
+}

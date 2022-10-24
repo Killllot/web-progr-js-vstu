@@ -1,0 +1,10 @@
+fieldset {
+    background-color: #f4dcf5;
+}
+input {
+    margin: 5px;
+}
+label {
+    font-size: 14pt;
+    font-family: "Times New Roman";
+}
