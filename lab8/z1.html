@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="js/jquery-3.6.1.js"></script>
+    <script src="js/Task1.js"></script>
+</head>
+<body>
+<form>
+  <p>Выбор действия</p>
+  <select name="action" id="action">
+    <option value="blank" selected>Выберите действие</option>
+    <option value="input">Ввод данных</option>
+    <option value="output">Просмотр данных</option>
+    <option value="search">Поиск данных</option>
+    <option value="delete">Удаление данных</option>
+  </select>
+  <fieldset id="input_train">
+    <legend id="f_name">Добавление</legend>
+    <label id="num">Номер поезда<input type="text" name="num"></label><br>
+    <label id="address">Пункт назначения<input type="text" name="p_naz"></label><br>
+    <label id="time">Время отправления<input type="text" name="v_otpr"></label><br>
+    <button id="b_add">Добавить</button>
+    <div class="message">Текст сообщения</div>
+  </fieldset>
+  <fieldset id="delete_train">
+    <legend >Удаление</legend>
+    <label >Номер поезда<input type="text" name="num"></label><br>
+    <button id="d_del">Удалить</button>
+    <div class="message">Текст сообщения</div>
+  </fieldset>
+  <fieldset id="search_train">
+    <legend id="del_num">Поиск</legend>
+    <label >Номер поезда<input type="text" name="num"></label><br>
+    <button id="s_find">Найти</button>
+    <div class="message">Текст сообщения</div>
+  </fieldset>
+  <div id="output_table"></div>
+</form>
+</body>
+</html>
