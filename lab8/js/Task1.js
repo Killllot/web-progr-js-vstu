@@ -22,7 +22,7 @@ $(function () {
         }
     };
 
-    var t = new Train(12, 'Казань', '12:30');
+    var t = new Train(80, '45.6', '100');
     var arrPr = [];
     arrPr.push(t);
 
@@ -45,6 +45,7 @@ $(function () {
             $('#output_table').show();
             $('#input_train').hide();
 
+
             let msHtml = "<table>";
 
             arrPr.forEach( (tr) => {
@@ -55,10 +56,13 @@ $(function () {
         }
         if (obj === 'search') {
             $('#output_table').html("");
+            $('#output_table').show();
             $('#input_train').hide();
             $('#search_train').show();
         }
         if (obj === 'delete') {
+            $('#output_table').html("");
+            $('#output_table').show();
             $('#delete_train').show();
             $('#input_train').hide();
         }
@@ -87,29 +91,55 @@ $(function () {
     });
 
     $("#s_find").click(function (e) {
-        var fieldNum = $('#num input').val();
-
+        var fieldNum = $('#sear input').val();
+        console.log(fieldNum);
         if(fieldNum ==="") {
             console.log(fieldNum);
             alert("Не все поля заполнены!");
             return false;
         }
         else {
+            let ps = arrPr.filter(el => el.num == fieldNum);
+
             let msHtml = "<table>";
 
-            arrPr.forEach( (tr) => {
-                msHtml += tr.search(fieldNum);
-            });
+            ps.forEach( (tr) => {
+                msHtml += tr.PrintTrain(ps);
+            })
 
             msHtml += "</table>"
-
             $('#output_table').html(msHtml);
 
 
             return false;
         }
 
-
     });
 
+    $("#delete_train").click(function (e) {
+        var fieldNum = $('#del input').val();
+        console.log(fieldNum);
+        if(fieldNum ==="") {
+            console.log(fieldNum);
+            alert("Не все поля заполнены!");
+            return false;
+        }
+        else {
+            let ps = arrPr.findIndex(el => el.num == fieldNum);
+            arrPr.splice(ps,1)
+
+            let msHtml = "<table>";
+
+            arrPr.forEach( (tr) => {
+                msHtml += tr.PrintTrain(tr);
+            })
+
+            msHtml += "</table>"
+            $('#output_table').html(msHtml);
+
+
+            return false;
+        }
+
+    });
 });
